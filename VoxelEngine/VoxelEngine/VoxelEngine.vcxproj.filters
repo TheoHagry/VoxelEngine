@@ -13,10 +13,16 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Internal Dependencies">
+      <UniqueIdentifier>{6c08be5a-1c52-43c2-a80b-063ee203ee31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="VoxelEngine.cpp">
+    <ClCompile Include="src\VoxelEngine.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Projets\Moteur GP2\Engine_Bakers\Engine\Dependencies\Tracy\TracyClient.cpp">
+      <Filter>Internal Dependencies</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
