@@ -24,5 +24,25 @@
     <ClCompile Include="D:\Projets\Moteur GP2\Engine_Bakers\Engine\Dependencies\Tracy\TracyClient.cpp">
       <Filter>Internal Dependencies</Filter>
     </ClCompile>
+    <ClCompile Include="src\EngineCore.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\glad\src\vulkan.c">
+      <Filter>Internal Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\glad\src\gl.c">
+      <Filter>Internal Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\EngineCore.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Window.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

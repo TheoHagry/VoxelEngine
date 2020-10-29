@@ -4,9 +4,11 @@
 #include <iostream>
 #include <Tracy.hpp>
 
+#include "EngineCore.h"
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    Core::Datastructure::EngineCore core;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
