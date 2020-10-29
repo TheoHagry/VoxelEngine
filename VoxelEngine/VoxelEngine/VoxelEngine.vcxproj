@@ -29,7 +29,7 @@
   <ItemGroup>
     <ClCompile Include="..\Dependencies\glad\src\gl.c" />
     <ClCompile Include="..\Dependencies\glad\src\vulkan.c" />
-    <ClCompile Include="D:\Projets\Moteur GP2\Engine_Bakers\Engine\Dependencies\Tracy\TracyClient.cpp" />
+    <ClCompile Include="..\Dependencies\Tracy\TracyClient.cpp" />
     <ClCompile Include="src\EngineCore.cpp" />
     <ClCompile Include="src\VoxelEngine.cpp" />
     <ClCompile Include="src\Window.cpp" />
