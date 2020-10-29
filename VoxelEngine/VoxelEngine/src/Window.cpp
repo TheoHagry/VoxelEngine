@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-void	error(int error, const char* message)
+void	error(int error, const char* message) noexcept
 {
-	std::cerr << message << std::endl;
+	std::cerr << "Error " << error << ", with message: " <<  message << std::endl;
 }
 
 void GLAPIENTRY
@@ -14,19 +14,24 @@ MessageCallback(GLenum source,
 	GLenum severity,
 	GLsizei length,
 	const GLchar* message,
-	const void* userParam)
+	const void* userParam) noexcept
 {
+	//Removing unreferenced parameters warnings
+	(void)userParam;
+	(void)length;
+	(void)id;
+	(void)source;
 	fprintf(stderr, "GL CALLBACK: %s type = 0x%x, severity = 0x%x, message = %s\n",
 		(type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : ""),
 		type, severity, message);
 }
 namespace Core::Renderer
 {
-	Window::Window(RendererType type) : m_rendererType(type)
+	Window::Window(RendererType type) noexcept : m_rendererType(type)
 	{
 	}
 
-	bool Window::Init()
+	bool Window::Init() noexcept
 	{
 		glfwSetErrorCallback(error);
 
@@ -65,10 +70,17 @@ namespace Core::Renderer
 		{
 			//TODO: possibly implement vulkan renderer
 		}
+
+		return true;
 	}
 
-	void Window::SwapBuffers()
+	void Window::SwapBuffers() noexcept
 	{
 		glfwSwapBuffers(m_window);
+	}
+
+	bool Window::ShouldClose() const noexcept
+	{
+		return glfwWindowShouldClose(m_window);
 	}
 }

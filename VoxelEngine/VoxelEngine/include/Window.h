@@ -4,7 +4,7 @@
 #include <glad/vulkan.h>
 #include <GLFW/glfw3.h>
 
-#include <Tracy.hpp>
+#include "CoreMinimal.h"
 
 namespace Core::Renderer
 {
@@ -20,10 +20,12 @@ namespace Core::Renderer
 		GLFWwindow*		m_window{ nullptr };
 		RendererType	m_rendererType;
 	public:
-		Window(RendererType = RendererType::OpenGL);
+		Window(RendererType = RendererType::OpenGL) noexcept;
 
-		bool	Init();
+		bool	Init() noexcept;
 
-		void	SwapBuffers();
+		void	SwapBuffers() noexcept;
+
+		bool	ShouldClose() const noexcept;
 	};
 }

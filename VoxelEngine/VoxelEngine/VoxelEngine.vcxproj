@@ -30,11 +30,14 @@
     <ClCompile Include="..\Dependencies\glad\src\gl.c" />
     <ClCompile Include="..\Dependencies\glad\src\vulkan.c" />
     <ClCompile Include="..\Dependencies\Tracy\TracyClient.cpp" />
+    <ClCompile Include="src\Debug.cpp" />
     <ClCompile Include="src\EngineCore.cpp" />
     <ClCompile Include="src\VoxelEngine.cpp" />
     <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\CoreMinimal.h" />
+    <ClInclude Include="include\Debug.h" />
     <ClInclude Include="include\EngineCore.h" />
     <ClInclude Include="include\Window.h" />
   </ItemGroup>

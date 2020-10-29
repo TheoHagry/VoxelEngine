@@ -2,13 +2,14 @@
 //
 
 #include <iostream>
-#include <Tracy.hpp>
 
 #include "EngineCore.h"
 
 int main()
 {
     Core::Datastructure::EngineCore core;
+    core.Init();
+    core.MainLoop();
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

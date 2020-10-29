@@ -2,8 +2,21 @@
 
 namespace Core::Datastructure
 {
-	EngineCore::EngineCore() : m_window()
+	EngineCore::EngineCore() noexcept : m_window()
 	{
-		m_window.Init();
+	}
+
+	bool EngineCore::Init() noexcept
+	{
+		return m_window.Init();
+	}
+	void EngineCore::MainLoop() noexcept
+	{
+		while (!m_window.ShouldClose() && !m_shouldClose)
+		{
+			glfwPollEvents();
+			m_window.SwapBuffers();
+		}
 	}
 }
+	
