@@ -27,7 +27,7 @@ MessageCallback(GLenum source,
 }
 namespace Core::Renderer
 {
-	Window::Window(RendererType type) noexcept : m_rendererType(type)
+	Window::Window(Core::Datastructure::EngineCore* core, RendererType type) noexcept : m_core{ core }, m_rendererType{ type }
 	{
 	}
 
@@ -55,7 +55,7 @@ namespace Core::Renderer
 		m_window = glfwCreateWindow(videoMode->width, videoMode->height, "Voxel Engine", nullptr, nullptr);
 
 		glfwMakeContextCurrent(m_window);
-		glfwSetWindowUserPointer(m_window, this);
+		glfwSetWindowUserPointer(m_window, m_core);
 		glfwSwapInterval(1);
 		if (m_rendererType == RendererType::OpenGL)
 		{
