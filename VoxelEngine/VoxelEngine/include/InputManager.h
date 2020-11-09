@@ -56,5 +56,7 @@ namespace Core::Datastructure
 			m_registeredScroll += yOffset;
 			//std::cout << "Scroll " << yOffset << std::endl;
 		}
+
+		EStateKey	GetKeyState(EKey key);
 	};
 }

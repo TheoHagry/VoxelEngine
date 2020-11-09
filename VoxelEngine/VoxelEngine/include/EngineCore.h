@@ -4,6 +4,7 @@
 
 #include "Window.h"
 #include "InputManager.h"
+#include "ResourceManager.h"
 
 namespace Core::Datastructure
 {
@@ -12,6 +13,7 @@ namespace Core::Datastructure
 	protected:
 		Core::Renderer::Window				m_window;
 		Core::Datastructure::InputManager	m_input;
+		Core::Resources::ResourceManager	m_manager;
 		bool								m_shouldClose{ false };
 	public:
 		EngineCore() noexcept;

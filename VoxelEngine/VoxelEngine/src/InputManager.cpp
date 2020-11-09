@@ -93,4 +93,18 @@ namespace Core::Datastructure
 		ClearInputs();
 		glfwPollEvents();
 	}
+
+	EStateKey InputManager::GetKeyState(EKey key)
+	{
+		//Searching for key in map
+		auto search = m_registeredKeys.find(key);
+
+		//If the key was found
+		if (search != m_registeredKeys.end())
+			//Return state of key
+			return search->second;
+		else
+			//Key is not in map, meaning it is in an up state
+			return EStateKey::UP;
+	}
 }

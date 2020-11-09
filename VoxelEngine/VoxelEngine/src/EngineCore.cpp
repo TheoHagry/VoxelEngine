@@ -1,4 +1,5 @@
 #include "EngineCore.h"
+#include <iostream>
 
 namespace Core::Datastructure
 {

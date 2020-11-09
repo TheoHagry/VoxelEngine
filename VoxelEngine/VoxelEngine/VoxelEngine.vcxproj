@@ -33,6 +33,8 @@
     <ClCompile Include="src\Debug.cpp" />
     <ClCompile Include="src\EngineCore.cpp" />
     <ClCompile Include="src\InputManager.cpp" />
+    <ClCompile Include="src\Resource.cpp" />
+    <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\VoxelEngine.cpp" />
     <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
@@ -42,6 +44,8 @@
     <ClInclude Include="include\EngineCore.h" />
     <ClInclude Include="include\Input.hpp" />
     <ClInclude Include="include\InputManager.h" />
+    <ClInclude Include="include\Resource.h" />
+    <ClInclude Include="include\ResourceManager.h" />
     <ClInclude Include="include\Window.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
